@@ -14,6 +14,17 @@ module.exports = {
     },
     module: {
         rules: [
+            // {
+            //     test: /\.js$/,
+            //     exclude: /node_modules/,
+            //     loader: 'babel-loader',
+            //     query: {
+            //         presets: ['es2015', 'react'],
+            //         plugins: [                                             //
+            //             ["import", {libraryName: "antd", style: "css"}]   //需要配置的地方
+            //         ]                                                    //
+            //     }
+            // },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
