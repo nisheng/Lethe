@@ -1,8 +1,7 @@
 const path = require("path");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const htmlPlugin = require('html-webpack-plugin');
-console.log('wtfwtfwtf');
-console.log(path.resolve(__dirname,'../dist'));
+// console.log(path.resolve(__dirname,'../dist'));
 module.exports = {
     mode : "development",
     entry : {
@@ -14,17 +13,6 @@ module.exports = {
     },
     module: {
         rules: [
-            // {
-            //     test: /\.js$/,
-            //     exclude: /node_modules/,
-            //     loader: 'babel-loader',
-            //     query: {
-            //         presets: ['es2015', 'react'],
-            //         plugins: [                                             //
-            //             ["import", {libraryName: "antd", style: "css"}]   //需要配置的地方
-            //         ]                                                    //
-            //     }
-            // },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -41,12 +29,12 @@ module.exports = {
                 ]
             },
             {test: /\.less$/, loader: 'style-loader!css-loader?modules!less-loader'},
-            {
-                loader:'url-loader',
-                options:{
-                    limit:500
-                }
-            }
+            // {
+            //     loader:'url-loader',
+            //     options:{
+            //         limit:500
+            //     }
+            // }
         ]
     },
     plugins: [
@@ -55,7 +43,7 @@ module.exports = {
             minify:{
                 removeAttributeQuotes:true
             },
-            hash: true,
+            hash: false,
             template: './src/app.html'
         })
     ],
