@@ -2,9 +2,13 @@
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 // const htmlPlugin = require('html-webpack-plugin');
 // // console.log(path.resolve(__dirname,'../dist'));
+//
+// // module.exports = merge(common, {
+// //     mode: 'production',
+// // });
 // module.exports = {
 //     mode : "development",
-//     devtool: 'inline-source-map',
+//     // devtool: 'inline-source-map',
 //     entry : {
 //         main: './src/index.js'
 //     },
